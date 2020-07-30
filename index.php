@@ -4,12 +4,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Put Content Here">
-    <meta name="keywords" content="Put keywords here">
-    <meta name="author" content="Put your name here">
+    <meta name="description" content="Book Review Database">
+    <meta name="keywords" content="books, reading, fiction, non-fiction, genre, reviews">
+    <meta name="author" content="L Wright">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Website Title goes here</title>
+    <title>Book Review Database</title>
     
     <!-- Edit the link below / replace with your chosen google font -->
     <link href="https://fonts.googleapis.com/css?family=Lato%7cUbuntu" rel="stylesheet"> 
@@ -35,14 +35,14 @@
             </div>    <!-- / logo -->
         </a>
             
-            <h1>Website Name</h1>
+            <h1>Orchid Reading</h1>
         </div>    <!-- / banner -->
 
    
         
         <div class = "box side">
         side bar goes here
-        </div>
+        </div> <!-- / side bar -->
         
         <div class="box main">
             <h2>First Page heading</h2>
@@ -63,7 +63,7 @@
         
 
         <div class="box footer">
-            CC yourname 20XX
+            CC L Wright 2020
         </div>    <!-- / footer -->
     
     </div>  <!-- / wrapper  -->

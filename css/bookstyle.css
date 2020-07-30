@@ -35,7 +35,7 @@ body {
 
 /* logo, banner and footer background are the same */
 .logo, .banner, .footer {
-    background-color: #A6DAF7;  /* baby blue */
+    background-color: #29363D;  /* almost black */
 }
 
 /* Set font on dark areas to white */
@@ -64,13 +64,13 @@ body {
 
 .side {
     grid-area: side;
-    background-color: #E9FFC2; /* light lemon yellow */
+    background-color: #C2FFCA; /* light green */
     color: #000;
 }
 
 .main {
     grid-area: main;
-    background-color: #C2C8F2;  /* light purple */
+    background-color: #B8E1FF;  /* baby blue */
     border: solid 1px #CCC;
 }
 
