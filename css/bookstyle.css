@@ -28,8 +28,7 @@ body {
 .box {
     padding: 20px;
     border-radius: 10px; 
-    background-color: #ddd;
-}
+    }
 
 /* Area colouring... */
 
@@ -86,10 +85,10 @@ h1, h2, h3, h4 {
     font-family: 'Ubuntu', sans-serif;
 }
 
-/* Navigation Links */
-.nav a {font-weight: bold;}
-.nav a:link, .nav a:visited {color: #AA0000;} /*dark red */
-.nav a:hover {color: #604830; text-decoration: none;} /* chocolate brown */
+/* Side Links */
+a.side{font-weight: bold; text-decoration: none;}
+a.side:link, a.side:visited {color: #662C91;} /* purple */
+a.side:hover {color: #cecfd5;} /* pale blue */
 
 
 /* links in page */

@@ -41,5 +41,12 @@
 
         
         <div class = "box side">
-        side bar goes here
+            <h2>Search | <a class="side" href="showall.php">Show All</a></h2>
+            <i>Type part of the title / author name if desired</i>
+            <hr />
+            Title Search<br />
+            Author search<br />
+            Genre search<br />
+            Rating search
         </div> <!-- / side bar -->
+        
