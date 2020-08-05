@@ -30,7 +30,7 @@
         <!-- logo image linking to home page goes here -->
         <a href="index.php">
             <div class="box logo"  title="Click here to go to the Home Page">
-            <img class="img-circle" src="images/bookslogo2.png" width="150" height="150" alt="broken logo" />
+            <img class="img-circle" src="images/bookslogo2.png" width="150" height="150" alt="books logo" />
             
             </div>    <!-- / logo -->
         </a>
