@@ -1,12 +1,12 @@
 <?php 
     include "topbit.php";
 
-    $showalll_sql="SELECT *
+    $showall_sql="SELECT *
 FROM `L1_prac_book_reviews`
 ORDER BY `L1_prac_book_reviews`.`Title` DESC";
-    $showalllquesry=mysqli_query($dbconnect,$showall_sql);
-    $showalll_rs=mysqli_fetch_assoc($shoqall_query);
-    $count=mysqli_num_rows($showallquery);
+    $showall_query=mysqli_query($dbconnect, $showall_sql);
+    $showall_rs=mysqli_fetch_assoc($showall_query);
+    $count=mysqli_num_rows($showall_query);
 ?>
         
         <div class="box main">
@@ -14,7 +14,7 @@ ORDER BY `L1_prac_book_reviews`.`Title` DESC";
             <h2>All Items</h2>
             
             <?php
-            // check id=f tere are any results
+            // check if there are any results
             if($count<1)
             {
                 
@@ -32,7 +32,7 @@ ORDER BY `L1_prac_book_reviews`.`Title` DESC";
                 do{
                 
                 ?>
-                         <!-- Results go here -->
+                <!-- Results go here -->
                 <div class="results">
                 
                 <p> Title: <span class="sub_heading"><?php echo $showall_rs['Title']; ?></span>
@@ -53,14 +53,14 @@ ORDER BY `L1_prac_book_reviews`.`Title` DESC";
                     Review Placeholder
                 </p>
                 
-            </div> <!--/ end results -->
+                </div> <!--/ end results -->
 
             
-            <?php
+                <?php
                     
                 } // end of 'do'
                 
-                while($showall_rs=mysqli_fetch_assoc($shoqall_query));
+                while($showall_rs=mysqli_fetch_assoc($showall_query));
             } // end else
             //if there are results, display them
             ?>
