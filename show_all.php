@@ -10,15 +10,35 @@ ORDER BY `L1_prac_book_reviews`.`Title` DESC";
 ?>
         
         <div class="box main">
+            
             <h2>All Items</h2>
             
-            <!-- Results go here -->
-            <div class="results">
+            <?php
+            // check id=f tere are any results
+            if($count<1)
+            {
                 
-                <p> Title: <span class="sub_heading">title holder</span>
+            ?>
+            <div class="error">
+                Sorry! There are no results that match your search. Please use thhe search box in the sidebar to try again.
+            </div>
+            
+            <?php
+                
+            } // end count 'if'
+            // if there are not results, output error
+            else {
+                
+                do{
+                
+                ?>
+                         <!-- Results go here -->
+                <div class="results">
+                
+                <p> Title: <span class="sub_heading"><?php echo $showall_rs['Title']; ?></span>
                 </p>
                 
-                <p> Author: <span class="sub_heading">Author holder</span>
+                <p> Author: <span class="sub_heading">author holder</span>
                 </p>
                 
                 <p> Genre: <span class="sub_heading">genre holder</span>
@@ -33,10 +53,22 @@ ORDER BY `L1_prac_book_reviews`.`Title` DESC";
                     Review Placeholder
                 </p>
                 
-            </div>
-        </div>    <!-- / main -->
-        
+            </div> <!--/ end results -->
 
+            
+            <?php
+                    
+                } // end of 'do'
+                
+                while($showall_rs=mysqli_fetch_assoc($shoqall_query));
+            } // end else
+            //if there are results, display them
+            ?>
+
+
+</div>    <!-- / main -->
+        
+    
 <?php 
     include "bottombit.php";
 ?>
