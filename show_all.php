@@ -1,5 +1,12 @@
 <?php 
     include "topbit.php";
+
+    $showalll_sql="SELECT *
+FROM `L1_prac_book_reviews`
+ORDER BY `L1_prac_book_reviews`.`Title` DESC";
+    $showalllquesry=mysqli_query($dbconnect,$showall_sql);
+    $showalll_rs=mysqli_fetch_assoc($shoqall_query);
+    $count=mysqli_num_rows($showallquery);
 ?>
         
         <div class="box main">
