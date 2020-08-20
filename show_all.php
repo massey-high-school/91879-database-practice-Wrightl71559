@@ -3,10 +3,10 @@
 
     $showall_sql="SELECT *
 FROM `L1_prac_book_reviews`
-ORDER BY `L1_prac_book_reviews`.`Title` DESC";
-    $showall_query=mysqli_query($dbconnect, $showall_sql);
-    $showall_rs=mysqli_fetch_assoc($showall_query);
-    $count=mysqli_num_rows($showall_query);
+ORDER BY `L1_prac_book_reviews`.`Title` ASC";
+    $showall_query= mysqli_query($dbconnect, $showall_sql);
+    $showall_rs= mysqli_fetch_assoc($showall_query);
+    $count= mysqli_num_rows($showall_query);
 ?>
         
         <div class="box main">
@@ -20,7 +20,7 @@ ORDER BY `L1_prac_book_reviews`.`Title` DESC";
                 
             ?>
             <div class="error">
-                Sorry! There are no results that match your search. Please use thhe search box in the sidebar to try again.
+                Sorry! There are no results that match your search. Please use the search box in the sidebar to try again.
             </div>
             
             <?php
