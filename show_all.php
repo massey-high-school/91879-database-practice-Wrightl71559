@@ -26,7 +26,7 @@ ORDER BY `L1_prac_book_reviews`.`Title` ASC";
             <?php
                 
             } // end count 'if'
-            // if there are not results, output error
+            // if there are no results, output error
             else {
                 
                 do{
