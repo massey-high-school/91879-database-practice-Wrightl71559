@@ -57,8 +57,20 @@ if(mysqli_connect_errno()) {
         <div class = "box side">
             <h2>Search | <a class="side" href="show_all.php">Show All</a></h2>
             <i>Type part of the title / author name if desired</i>
+            
             <hr />
-            Title Search<br />
+            
+            <!-- Start of title search -->
+
+            <form method="post" action="title_search.php" enctype="multipart/form-data"> 
+            
+            <input class="search" type="text" size="40"  value="" required placeholder="Title..."/>
+            <input class="submit" type="submit" name="find_title" value="Search"/>
+            </form>
+            
+            <!-- End of title search -->
+            <hr />
+            
             Author search<br />
             Genre search<br />
             Rating search
