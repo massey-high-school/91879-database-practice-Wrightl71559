@@ -8,12 +8,12 @@ if(isset ($_POST['find_title']))
 
 $title = $_POST['title'];
     
-$showall_sql="SELECT *
+$find_sql="SELECT *
 FROM `L1_prac_book_reviews`
 WHERE `Title` LIKE '%$title%' ORDER BY `Title` ASC ";
-    $showall_query= mysqli_query($dbconnect, $showall_sql);
-    $showall_rs= mysqli_fetch_assoc($showall_query);
-    $count= mysqli_num_rows($showall_query);
+    $find_query= mysqli_query($dbconnect, $find_sql);
+    $find_rs= mysqli_fetch_assoc($find_query);
+    $count= mysqli_num_rows($find_query);
 ?>
         
         <div class="box main">
@@ -42,19 +42,19 @@ WHERE `Title` LIKE '%$title%' ORDER BY `Title` ASC ";
                 <!-- Results go here -->
                 <div class="results">
                 
-                <p> Title: <span class="sub_heading"><?php echo $showall_rs['Title']; ?></span>
+                <p> Title: <span class="sub_heading"><?php echo $find_rs['Title']; ?></span>
                 </p>
                 
-                <p> Author: <span class="sub_heading"><?php echo $showall_rs['Author']; ?></span>
+                <p> Author: <span class="sub_heading"><?php echo $find_rs['Author']; ?></span>
                 </p>
                 
-                <p> Genre: <span class="sub_heading"><?php echo $showall_rs['Genre']; ?></span>
+                <p> Genre: <span class="sub_heading"><?php echo $find_rs['Genre']; ?></span>
                 </p>
                 
                 <p> Rating: <span class="sub_heading">
                     
                     <?php 
-                    for ($x=0; $x < $showall_rs['Rating']; $x++)
+                    for ($x=0; $x < $find_rs['Rating']; $x++)
                     
                     {
                         echo "&#9733;";
@@ -67,7 +67,7 @@ WHERE `Title` LIKE '%$title%' ORDER BY `Title` ASC ";
                 <p><span class="sub_heading">Review / Response</span></p>
                 
                 <p>
-                    <?php echo $showall_rs['Review']; ?>
+                    <?php echo $find_rs['Review']; ?>
                 </p>
                 
                 </div> <!--/ end results -->
@@ -78,7 +78,7 @@ WHERE `Title` LIKE '%$title%' ORDER BY `Title` ASC ";
                     
                 } // end of 'do'
                 
-                while($showall_rs=mysqli_fetch_assoc($showall_query));
+                while($find_rs=mysqli_fetch_assoc($find_query));
             } // end else
             //if there are results, display them
     
