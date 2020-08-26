@@ -1,9 +1,16 @@
 <?php 
     include "topbit.php";
 
-    $showall_sql="SELECT *
+// if find button pushed
+if(isset ($_POST['find_title']))
+    
+{
+
+$title = $_POST['title'];
+    
+$showall_sql="SELECT *
 FROM `L1_prac_book_reviews`
-ORDER BY `L1_prac_book_reviews`.`Title` ASC";
+WHERE `Title` LIKE '%$title%' ORDER BY `Title` ASC ";
     $showall_query= mysqli_query($dbconnect, $showall_sql);
     $showall_rs= mysqli_fetch_assoc($showall_query);
     $count= mysqli_num_rows($showall_query);
@@ -74,6 +81,9 @@ ORDER BY `L1_prac_book_reviews`.`Title` ASC";
                 while($showall_rs=mysqli_fetch_assoc($showall_query));
             } // end else
             //if there are results, display them
+    
+            }//end isset
+
             ?>
 
 
