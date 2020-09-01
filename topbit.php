@@ -6,6 +6,7 @@
     
 session_start(); // to allow variable transfer between pages
 include ("config.php");
+include ("functions.php");  // include data sanitising
     
 // connect to database
 $dbconnect=mysqli_connect(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME);
@@ -71,7 +72,17 @@ if(mysqli_connect_errno()) {
             <!-- End of title search -->
             <hr />
             
-            Author search<br />
+            <!-- Start of author search -->
+
+            <form method="post" action="author_search.php" enctype="multipart/form-data"> 
+            
+            <input class="search" type="text" name="author" size="40"  value="" required placeholder="author..."/>
+            <input class="submit" type="submit" name="find_author" value="Search"/>
+            </form>
+            
+            <!-- End of author search -->
+            
+            <hr/>
             Genre search<br />
             Rating search
         </div> <!-- / side bar -->
