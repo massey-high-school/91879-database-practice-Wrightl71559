@@ -97,10 +97,23 @@ if(mysqli_connect_errno()) {
             </select>
                 
             <input class="submit" type="submit" name="find_genre" value="Search"/>
-                
+            </form>   
             <!-- End of genre search -->
             <hr />
             
-            Rating search
+            <!-- Start of ratings form -->
+            
+            <form method="post" action="rating_search.php" enctype="multipart/form-data"> 
+            
+            <select class="half_width" name="amount">
+                <option value="exactly" selected>Exactly...</option>
+                <option value="more">At least...</option>
+                <option value="less">At most...</option>
+            
+            
+            </form>
+            
+            <!-- Start of ratings form -->
+            
         </div> <!-- / side bar -->
         
