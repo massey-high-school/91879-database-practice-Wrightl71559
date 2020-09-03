@@ -76,14 +76,31 @@ if(mysqli_connect_errno()) {
 
             <form method="post" action="author_search.php" enctype="multipart/form-data"> 
             
-            <input class="search" type="text" name="author" size="40"  value="" required placeholder="author..."/>
+            <input class="search" type="text" name="author" size="40"  value="" required placeholder="Author..."/>
             <input class="submit" type="submit" name="find_author" value="Search"/>
             </form>
             
             <!-- End of author search -->
-            
             <hr/>
-            Genre search<br />
+            
+            <!-- Start of genre search -->
+            
+            <form method="post" action="genre_search.php" enctype="multipart/form-data"> 
+            
+           
+            <select name="genre" required>
+                <option value="" disabled selected>Genre...</option>
+                <option value="Sci Fi">Science Fiction</option>
+                <option value="Humour">Humour</option>
+                <option value="Historical Fiction">Historical Fiction</option>
+                <option value="Non Fiction">Non Fiction</option>
+            </select>
+                
+            <input class="submit" type="submit" name="find_genre" value="Search"/>
+                
+            <!-- End of genre search -->
+            <hr />
+            
             Rating search
         </div> <!-- / side bar -->
         
