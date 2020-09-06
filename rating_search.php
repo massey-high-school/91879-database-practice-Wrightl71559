@@ -13,16 +13,18 @@ $stars=test_input(mysqli_real_escape_string($dbconnect, $_POST['stars']));
 if ($amount=="exactly")
     
 {
-$find_sql="SELECT *
-FROM `L1_prac_book_reviews`
-WHERE `Rating` =$stars ORDER BY `title` ASC";  
+    $find_sql="SELECT *
+    FROM `L1_prac_book_reviews`
+    WHERE `Rating` =$stars ORDER BY `title` ASC";  
 }
     
     
 
-    $find_query= mysqli_query($dbconnect, $find_sql);
-    $find_rs= mysqli_fetch_assoc($find_query);
-    $count= mysqli_num_rows($find_query);
+$findall_query= mysqli_query($dbconnect, $findall_sql);
+$findall_rs= mysqli_fetch_assoc($findall_query);
+$count= mysqli_num_rows($find_query);
+    
+
 ?>
         
         <div class="box main">
