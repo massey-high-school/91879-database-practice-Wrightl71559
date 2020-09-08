@@ -26,6 +26,12 @@ elseif ($amount=="less")
     WHERE `Rating` <=$stars ORDER BY `title` ASC";  
 }
 
+else {
+     $find_sql="SELECT *
+    FROM `L1_prac_book_reviews`
+    WHERE `Rating` >=$stars ORDER BY `title` ASC"; 
+}
+
 // runs query.    
 $find_query= mysqli_query($dbconnect, $find_sql);
 $find_rs= mysqli_fetch_assoc($find_query);
