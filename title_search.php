@@ -12,9 +12,7 @@ $title=test_input(mysqli_real_escape_string($dbconnect, $_POST['title']));
 $find_sql="SELECT *
 FROM `L1_prac_book_reviews`
 WHERE `Title` LIKE '%$title%' ORDER BY `Title` ASC ";
-    $find_query= mysqli_query($dbconnect, $find_sql);
-    $find_rs= mysqli_fetch_assoc($find_query);
-    $count= mysqli_num_rows($find_query);
+--
 ?>
         
         <div class="box main">

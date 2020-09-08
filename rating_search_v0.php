@@ -13,29 +13,23 @@ $stars=test_input(mysqli_real_escape_string($dbconnect, $_POST['stars']));
 if ($amount=="exactly")
     
 {
-    $find_sql="SELECT *
+    $findall_sql="SELECT *
     FROM `L1_prac_book_reviews`
     WHERE `Rating` =$stars ORDER BY `title` ASC";  
 }
-
-elseif ($amount=="less")
     
-{
-   $find_sql="SELECT *
-    FROM `L1_prac_book_reviews`
-    WHERE `Rating` <=$stars ORDER BY `title` ASC";  
-}
-
-// runs query.    
-$find_query= mysqli_query($dbconnect, $find_sql);
-$find_rs= mysqli_fetch_assoc($find_query);
-$count= mysqli_num_rows($find_query);
     
+
+$findall_query= mysqli_query($dbconnect, $findall_sql);
+$findall_rs= mysqli_fetch_assoc($findall_query);
+$count= mysqli_num_rows($findall_query);
+    
+
 ?>
         
         <div class="box main">
             
-            <h2>Ratings search</h2>
+            <h2>Rating search</h2>
             
             <?php
             // check if there are any results
@@ -59,10 +53,10 @@ $count= mysqli_num_rows($find_query);
                 <!-- Results go here -->
                 <div class="results">
                 
-                <p> Title: <span class="sub_heading"><?php echo $find_rs['Title']; ?></span>
+                <p> Title: <span class="sub_heading"><?php echo $findall_rs['Title']; ?></span>
                 </p>
                 
-                <p> Author: <span class="sub_heading"><?php echo $find_rs['Author']; ?></span>
+                <p> rating: <span class="sub_heading"><?php echo $find_rs['Author']; ?></span>
                 </p>
                 
                 <p> Genre: <span class="sub_heading"><?php echo $find_rs['Genre']; ?></span>
