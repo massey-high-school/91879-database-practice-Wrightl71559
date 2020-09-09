@@ -84,6 +84,7 @@ if(mysqli_connect_errno()) {
             <hr/>
             
             <!-- Start of genre search -->
+            <i>Use the dropdown menus to search by genre or rating</i>
             
             <form method="post" action="genre_search.php" enctype="multipart/form-data"> 
             
@@ -102,19 +103,19 @@ if(mysqli_connect_errno()) {
             <hr />
             
             <!-- Start of ratings form -->
-            
+            <h2>Rating Search<h2/>
             <form method="post" action="rating_search.php" enctype="multipart/form-data"> 
             
             <select class="half_width" name="amount">
-                <option value="exactly" selected>Exactly...</option>
-                <option value="more">At least...</option>
+                <option value="exactly">Exactly...</option>
+                <option value="more" selected>At least...</option>
                 <option value="less">At most...</option>
             </select>
                 
             <select class="half_width" name="stars">
                 <option value=1>&#9733;</option>
                 <option value=2>&#9733;&#9733;</option>
-                <option value=3>&#9733;&#9733;&#9733;</option>
+                <option value=3 selected>&#9733;&#9733;&#9733;</option>
                 <option value=4>&#9733;&#9733;&#9733;&#9733;</option>
                 <option value=5>&#9733;&#9733;&#9733;&#9733;&#9733;</option>
             </select>
