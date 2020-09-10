@@ -31,6 +31,7 @@ if(mysqli_connect_errno()) {
     
     <!-- Edit the name of your style sheet - 'foo' is not a valid name!! -->
     <link rel="stylesheet" href="css/bookstyle.css"> 
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     
 </head>
     
@@ -66,7 +67,7 @@ if(mysqli_connect_errno()) {
             <form method="post" action="title_search.php" enctype="multipart/form-data"> 
             
             <input class="search" type="text" name="title" size="40"  value="" required placeholder="Title..."/>
-            <input class="submit" type="submit" name="find_title" value="Search"/>
+            <input class="submit" type="submit" name="find_title" value="&#xf002;"/>
             </form>
             
             <!-- End of title search -->
@@ -77,7 +78,7 @@ if(mysqli_connect_errno()) {
             <form method="post" action="author_search.php" enctype="multipart/form-data"> 
             
             <input class="search" type="text" name="author" size="40"  value="" required placeholder="Author..."/>
-            <input class="submit" type="submit" name="find_author" value="Search"/>
+            <input class="submit" type="submit" name="find_author" value="&#xf002;"/>
             </form>
             
             <!-- End of author search -->
@@ -97,7 +98,7 @@ if(mysqli_connect_errno()) {
                 <option value="Non Fiction">Non Fiction</option>
             </select>
                 
-            <input class="submit" type="submit" name="find_genre" value="Search"/>
+            <input class="submit" type="submit" name="find_genre" value="&#xf002;"/>
             </form>   
             <!-- End of genre search -->
             <hr />
@@ -120,7 +121,7 @@ if(mysqli_connect_errno()) {
                 <option value=5>&#9733;&#9733;&#9733;&#9733;&#9733;</option>
             </select>
                 
-                <input class="submit" type="submit" name="find_rating" value="Search"/>
+                <input class="submit" type="submit" name="find_rating" value="&#xf002;"/>
                 
             </form>
             
