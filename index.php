@@ -3,7 +3,7 @@
 ?>
         
         <div class="box main">
-            <h2>Welcome</h2>
+            <h1>Welcome</h1>
             
             <p>
                 Reading is one of life's simple pleasures. Please search the database by using the tools in the side bar. Hopefully you will find something that appeals.

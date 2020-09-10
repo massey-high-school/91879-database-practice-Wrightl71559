@@ -57,7 +57,7 @@ if(mysqli_connect_errno()) {
         
         <div class = "box side">
             <h2>Search | <a class="side" href="show_all.php">Show All</a></h2>
-            <i>Type part of the title / author name if desired</i>
+            <i>Type part of the Title / Author name if desired</i>
             
             <hr />
             
@@ -84,7 +84,7 @@ if(mysqli_connect_errno()) {
             <hr/>
             
             <!-- Start of genre search -->
-            <i>Use the dropdown menus to search by genre or rating</i>
+            <i>Use the dropdown menus to search by Genre or Rating</i>
             
             <form method="post" action="genre_search.php" enctype="multipart/form-data"> 
             
