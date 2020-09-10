@@ -103,7 +103,7 @@ if(mysqli_connect_errno()) {
             <hr />
             
             <!-- Start of ratings form -->
-            <h2>Rating Search</h2>
+            <b>Rating Search</b>
             <form method="post" action="rating_search.php" enctype="multipart/form-data"> 
             
             <select class="half_width" name="amount">
