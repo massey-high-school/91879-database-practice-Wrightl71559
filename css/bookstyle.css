@@ -141,9 +141,12 @@ a:hover{color: #000;}    /* Black*/
 }
 
 /* form formatting */ 
-
+form {
+    width: 250px;
+    margin 5px;
+}
 .search{
-    width: 200px;
+    width: 170px;
     padding: 8px 15px;
     background: #fff;
 }
@@ -151,7 +154,7 @@ a:hover{color: #000;}    /* Black*/
 .submit{
     font-family: FontAwesome;
     position: relative;
-    width: 45px;
+    width: 30px;
     left: -1px;
     background-color: #636363; /* dark grey */
     color: #d6d6d6; /* light grey */
@@ -160,10 +163,25 @@ a:hover{color: #000;}    /* Black*/
 }
 
 
+input {
+    height: 40px;
+    padding: 10px;
+    display: inline-block;
+    border: 1px soliud #ccc;
+    box-sizing: border-box;
+}
 
+.half_width {
+    width: 99px;
+}
 
-
-
+select {
+    outline: 0;
+    height: 40px;
+    border: 1px solid #ccc;
+    color: #878787;
+    width: 200px;
+}
 
 
 
