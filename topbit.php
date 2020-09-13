@@ -90,7 +90,7 @@ if(mysqli_connect_errno()) {
             <form method="post" action="genre_search.php" enctype="multipart/form-data"> 
             
            
-            <select name="genre" required>
+            <select name="genre" class="full_width" required>
                 <option value="" disabled selected>Genre...</option>
                 <option value="Sci Fi">Science Fiction</option>
                 <option value="Humour">Humour</option>
